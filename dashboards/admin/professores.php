@@ -34,10 +34,18 @@
                 print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>O código inserido para este professor já existe. Por favor tente inserir outro</h2>";
             } else if (mysqli_num_rows($results['cpf']) > 0) {
                 print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>O CPF inserido para este professor já existe. Por favor tente inserir outro</h2>";
+            } else if ($cadastraProf['code'] == 0) {
+                print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>O campo de Código não pode ser negativo</h2>";
             } else {
-                $sqlInsertProf = "INSERT INTO professores (code, status, nome, cpf, nascimento, formacao, graduacao, pos_graduacao, mestrado, doutorado, salario) VALUES ('{$cadastraProf['code']}', '{$cadastraProf['status']}', '{$cadastraProf['nome']}', '{$cadastraProf['cpf']}', '{$cadastraProf['nascimento']}', '{$cadastraProf['formacao']}', '{$cadastraProf['graduacao']}', '{$cadastraProf['pos_graduacao']}', '{$cadastraProf['mestrado']}', '{$cadastraProf['doutorado']}', '{$cadastraProf['salario']}')";
-                $result = mysqli_query($connection, $sqlInsertProf);
-                if ($result) {
+                $sqls = [
+                        'professores' => "INSERT INTO professores (code, status, nome, cpf, nascimento, formacao, graduacao, pos_graduacao, mestrado, doutorado, salario) VALUES ('{$cadastraProf['code']}', '{$cadastraProf['status']}', '{$cadastraProf['nome']}', '{$cadastraProf['cpf']}', '{$cadastraProf['nascimento']}', '{$cadastraProf['formacao']}', '{$cadastraProf['graduacao']}', '{$cadastraProf['pos_graduacao']}', '{$cadastraProf['mestrado']}', '{$cadastraProf['doutorado']}', '{$cadastraProf['salario']}')",
+                        'login' => "INSERT INTO login (status, code, password, name, dashboard) VALUES ('{$cadastraProf['status']}', '{$cadastraProf['code']}', '{$cadastraProf['code']}', '{$cadastraProf['nome']}', 'Professor')"
+                ];
+                $results = [
+                        'professores' => mysqli_query($connection, $sqls['professores']),
+                        'login' => mysqli_query($connection, $sqls['login']),
+                ];
+                if ($results['professores'] && $results['login']) {
                     print "<script language='JavaScript'>window.alert('Professor cadastrado com sucesso');</script>";
                     print "<script language='javascript'>window.location='professores.php?pg=professores';</script>";
                 } else {
@@ -166,8 +174,8 @@
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="professores.php?pg=professores&acao=historico">
-                            <img title="Visualizar histórico do professor" src="../../public/images/olho.png" width="25" alt="Visualiza histórico professor">
+                        <a href="dados_professor.php?id=<?=$res_1['id']?>&code=<?=$res_1['code']?>">
+                            <img class="bg-light rounded-circle" title="Visualizar dados do professor" src="../../public/images/olho.png" width="25" alt="Visualizar dados professor">
                         </a>
                     </td>
                 </tr>
