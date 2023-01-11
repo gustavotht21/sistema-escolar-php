@@ -1,3 +1,6 @@
+<title>Cursos e disciplinas</title>
+
+<?php $painelAtual = 'Admin'; ?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -6,7 +9,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cursos e disciplinas</title>
-
+    <?php require_once '../../resources/php/action/config.php'?>
+    <?php require_once '../../resources/php/action/connection.php'?>
 </head>
 <body>
     <?php require_once 'header.php'?>
@@ -33,8 +37,8 @@
 
                 <form action="" class="d-flex" method="post">
                     <input type="text" class="form-control w-50 me-3" name="curso" placeholder="Nome do curso" required>
-                    <button class="btn btn-info w-10 text-white fw-bold" name="cadastra">Cadastrar</button>
-                </form>
+                    <button class="btn btn-info w-25 text-white fw-bold me-2" name="cadastra">Cadastrar</button>
+                    <a class="btn btn-danger w-10 text-white fw-bold"  href="cursos_e_disciplinas.php?pg=curso">Cancelar</a></form>
             <?php }?>
 
             <!-- EXIBIÇÃO DOS CURSOS -->
@@ -102,7 +106,7 @@
 
             }?>
 
-            <form action="" class="d-flex" method="post">
+            <form action="" class="d-flex flex-wrap" method="post">
 
                 <select class="form-select me-2" aria-label="Default select example" style="width: 180px" name="curso" required>
                     <?php
@@ -135,9 +139,12 @@
                     <option value="Tarde">Tarde</option>
                     <option value="Noite">Noite</option>
                 </select>
+                <div class="mt-2 w-100">
+                    <button class="btn btn-info text-white fw-bold w-25" name="cadastra">Cadastrar</button>
+                    <a class="btn btn-danger text-white fw-bold w-10"  href="cursos_e_disciplinas.php?pg=disciplina">Cancelar</a>
+                </div>
 
-                <button class="btn btn-info w-10 text-white fw-bold" name="cadastra">Cadastrar</button>
-            </form>
+                </form>
         <?php } ?>
         <?php
         $sqlDisc = "SELECT * FROM disciplinas";
