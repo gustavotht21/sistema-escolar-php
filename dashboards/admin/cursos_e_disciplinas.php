@@ -13,7 +13,7 @@
     <?php require_once '../../resources/php/action/connection.php'?>
 </head>
 <body>
-    <?php require_once 'header.php'?>
+    <?php require_once 'header_admin.php' ?>
 
     <div class="container w-75 align-items-center bg-light mt-3 p-2 rounded-2" style="border: 2px solid #0e7490">
         <?php if (@$_GET['pg'] == 'curso') { ?>
@@ -244,6 +244,6 @@
 
         ?>
     </div>
-    <?php require_once 'footer.php'?>
+    <?php require_once 'footer_admin.php' ?>
 </body>
 </html>

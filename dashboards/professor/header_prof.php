@@ -10,8 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="../../public/images/books.png">
 
-
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="header_prof.css">
     <?php require_once '../../resources/php/action/connection.php'?>
 
 </head>
@@ -30,7 +29,7 @@
         </div>
     </div>
     <div class="mt-2" style="display: flex; gap: 20px; justify-content: center; align-items: center;">
-        <p class="fw-bold">Bem-vindo! O seu código de acesso é:</p>
+        <p class="fw-bold">Bem-vindo professor! O seu código de acesso é:</p>
         <p class=""><?= $_SESSION['code'] ?></p>
     </div>
     <div class="container text-center">
@@ -41,77 +40,41 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" aria-current="page" href="admin.php">Home</a>
+                        <a class="nav-link text-white fw-bold" aria-current="page" href="professores.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a type="button" class="bg-info border-0 dropdown-toggle text-white fw-bold nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" _msthash="1940757" _msttexthash="876850" style="text-decoration: none">
-                            Cursos e disciplinas
+                            Todas as avaliações
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start" style="" _msthidden="3">
                             <li _msthidden="1">
                                 <a class="dropdown-item" type="button" _msthash="2644486" _msttexthash="76466" _msthidden="1" href="cursos_e_disciplinas.php?pg=curso">
-                                    Cadastrar curso
+                                    Trabalhos bimestrais
                                 </a>
                             </li>
                             <li _msthidden="1">
                                 <a class="dropdown-item" type="button" _msthash="2644733" _msttexthash="232752" _msthidden="1" href="cursos_e_disciplinas.php?pg=disciplina">
-                                    Cadastrar disciplina
+                                    Provas bimestrais
                                 </a>
                             </li>
                             <li _msthidden="1">
                                 <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="cursos_e_disciplinas.php?pg=cursoedisciplinas">
-                                    Cursos & disciplinas
+                                    Trabalhos extras
+                                </a>
+                            </li>
+                            <li _msthidden="1">
+                                <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="cursos_e_disciplinas.php?pg=cursoedisciplinas">
+                                    Notas de observação
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="professores.php?pg=professores">Professores</a>
+                        <a class="nav-link text-white fw-bold" href="turmas_e_alunos.php?pg=turmas_e_alunos">Turmas & alunos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="estudantes.php?pg=todos">Estudantes</a>
+                        <a class="nav-link text-white fw-bold" href="professores.php?pg=suporte">Suporte Técnico</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="setor_financeiro.php">Setor financeiro</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a type="button" class="bg-info border-0 dropdown-toggle text-white fw-bold nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" _msthash="1940757" _msttexthash="876850" style="text-decoration: none">
-                            Relatórios
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-start" style="" _msthidden="3">
-                            <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644486" _msttexthash="76466" _msthidden="1" href="#">
-                                    Alunos
-                                </a>
-                            </li>
-                            <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644733" _msttexthash="232752" _msthidden="1" href="#">
-                                    Professores
-                                </a>
-                            </li>
-                            <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="#">
-                                    Fluxo de caixa
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="suporte_tecnico.php">Suporte técnico</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a type="button" class="bg-info border-0 dropdown-toggle text-white fw-bold nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" _msthash="1940757" _msttexthash="876850" style="text-decoration: none">
-                            Extras
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-start" style="" _msthidden="3">
-                            <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644486" _msttexthash="76466" _msthidden="1" href="funcionarios.php?pg=todos">
-                                    Funcionários
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>

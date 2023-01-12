@@ -1,6 +1,6 @@
 <title>Professores</title>
 
-<?php require_once 'header.php'?>
+<?php require_once 'header_admin.php' ?>
 
 <div class="container w-75 align-items-center bg-light mt-3 p-2 rounded-2" style="border: 2px solid #0e7490">
     <?php if (@$_GET['pg'] == 'professores') { ?>
@@ -164,7 +164,7 @@
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="professores.php?pg=professores&acao=deleta&id=<?=$res_1['id']?>">
+                        <a href="professores.php?pg=professores&acao=deleta&id=<?=$res_1['id']?>&code=<?=$res_1['code']?>">
                             <img title="Deletar professor" src="../../public/images/lixeira.png" width="25" alt="Excluir curso">
                         </a>
                     </td>
@@ -174,7 +174,7 @@
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="dados_professor.php?id=<?=$res_1['id']?>&code=<?=$res_1['code']?>">
+                        <a href="dados_professor.php?id=<?=base64_encode($res_1['id'])?>&code=<?=base64_encode($res_1['code'])?>">
                             <img class="bg-light rounded-circle" title="Visualizar dados do professor" src="../../public/images/olho.png" width="25" alt="Visualizar dados professor">
                         </a>
                     </td>
@@ -184,8 +184,11 @@
             <!-- DELEÇÃO DOS PROFESSORES -->
             <?php if(@$_GET['acao'] == 'deleta'){
                 $id = $_GET['id'];
+                $code = $_GET['code'];
 
                 $sqlDeleteProf = "DELETE FROM professores WHERE id = '{$id}'";
+                mysqli_query($connection, $sqlDeleteProf);
+                $sqlDeleteProf = "DELETE FROM login WHERE code = '{$code}'";
                 mysqli_query($connection, $sqlDeleteProf);
 
                 print "<script language='javascript'>window.location='professores.php?pg=professores';</script>";
@@ -313,4 +316,4 @@
             }?>
 </div>
 
-<?php require_once 'footer.php'?>
+<?php require_once 'footer_admin.php' ?>
