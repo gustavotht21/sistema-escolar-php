@@ -46,15 +46,15 @@
                         $_SESSION['dashboard'] = $dashboard;
 
                         if ($dashboard == 'Admin') {
-                            print "<script language='JavaScript'>window.location='/dashboards/admin/admin.php';</script>";
+                            header('Location: /dashboards/admin/admin.php');
                         } else if ($dashboard == 'Aluno') {
-                            print "<script language='JavaScript'>window.location='/dashboards/aluno/aluno.php';</script>";
+                            header('Location: /dashboards/aluno/aluno.php');
                         } else if ($dashboard == 'Portaria') {
-                            print "<script language='JavaScript'>window.location='/dashboards/portaria/portaria.php';</script>";
+                            header('Location: /dashboards/portaria/portaria.php');
                         } else if ($dashboard == 'Professor') {
-                            print "<script language='JavaScript'>window.location='dashboards/professor/professores.php';</script>";
+                            header('Location: /dashboards/professor/professores.php');
                         } else if ($dashboard == 'Tesouraria') {
-                            print "<script language='JavaScript'>window.location='/dashboards/tesouraria/tesouraria.php';</script>";
+                            header('Location: /dashboards/tesouraria/tesouraria.php');
                         }
                     }
                 }
