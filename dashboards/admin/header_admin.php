@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="header_admin.css">
     <?php require_once '../../resources/php/action/connection.php'?>
+    <?php require_once '../../resources/php/action/config.php'?>
 
 </head>
 <body>
@@ -31,7 +32,7 @@
     </div>
     <div class="mt-2" style="display: flex; gap: 20px; justify-content: center; align-items: center;">
         <p class="fw-bold">Bem-vindo! O seu código de acesso é:</p>
-        <p class=""><?= $_SESSION['code'] ?></p>
+        <p class=""><?= $code; ?></p>
     </div>
     <div class="container text-center">
         <a href="../../resources/php/action/config.php?acao=quebra" class="btn btn-danger fw-bold" style="width: 120px;">Sair</a>

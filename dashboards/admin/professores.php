@@ -135,7 +135,7 @@
             print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>Não há nenhum professor cadastrado</h2>";
         } else { ?>
             <h3 class="text-secondary mt-3">Professores</h3>
-            <table class="table table-striped table-secondary">
+            <table class="table table-striped table-secondary align-middle">
                 <tr>
                     <td class="fw-semibold">Nome:</td>
                     <td class="fw-semibold">Código:</td>

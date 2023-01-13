@@ -1,4 +1,4 @@
-<?php $painelAtual = 'Admin'; ?>
+<?php $painelAtual = 'Professor'; ?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="header_prof.css">
     <?php require_once '../../resources/php/action/connection.php'?>
+    <?php require_once '../../resources/php/action/config.php'?>
 
 </head>
 <body>
@@ -30,7 +31,7 @@
     </div>
     <div class="mt-2" style="display: flex; gap: 20px; justify-content: center; align-items: center;">
         <p class="fw-bold">Bem-vindo professor! O seu código de acesso é:</p>
-        <p class=""><?= $_SESSION['code'] ?></p>
+        <p class=""><?php session_start(); print $code; ?></p>
     </div>
     <div class="container text-center">
         <a href="../../resources/php/action/config.php?acao=quebra" class="btn btn-danger fw-bold" style="width: 120px;">Sair</a>
@@ -48,22 +49,22 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start" style="" _msthidden="3">
                             <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644486" _msttexthash="76466" _msthidden="1" href="cursos_e_disciplinas.php?pg=curso">
+                                <a class="dropdown-item" type="button" _msthash="2644486" _msttexthash="76466" _msthidden="1" href="trabalhos_bimestrais.php">
                                     Trabalhos bimestrais
                                 </a>
                             </li>
                             <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644733" _msttexthash="232752" _msthidden="1" href="cursos_e_disciplinas.php?pg=disciplina">
+                                <a class="dropdown-item" type="button" _msthash="2644733" _msttexthash="232752" _msthidden="1" href="provas_bimestrais.php">
                                     Provas bimestrais
                                 </a>
                             </li>
                             <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="cursos_e_disciplinas.php?pg=cursoedisciplinas">
+                                <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="trabalhos_extras.php">
                                     Trabalhos extras
                                 </a>
                             </li>
                             <li _msthidden="1">
-                                <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="cursos_e_disciplinas.php?pg=cursoedisciplinas">
+                                <a class="dropdown-item" type="button" _msthash="2644980" _msttexthash="349791" _msthidden="1" href="notas_observacao.php">
                                     Notas de observação
                                 </a>
                             </li>
@@ -73,7 +74,7 @@
                         <a class="nav-link text-white fw-bold" href="turmas_e_alunos.php?pg=turmas_e_alunos">Turmas & alunos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-bold" href="professores.php?pg=suporte">Suporte Técnico</a>
+                        <a class="nav-link text-white fw-bold" href="suporte_tecnico.php">Suporte Técnico</a>
                     </li>
             </div>
         </div>

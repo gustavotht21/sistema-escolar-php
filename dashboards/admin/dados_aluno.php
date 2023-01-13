@@ -29,7 +29,7 @@
     <div class="container mt-3">
         <a href="estudantes.php?pg=estudantes" class="btn btn-info text-white fw-bold">Voltar para a tela de alunos</a>
         <h2 class="text-secondary mt-3">Dados do(a) aluno(a)</h2>
-        <table class="table table-striped mt-3">
+        <table class="table table-striped mt-3 align-middle">
             <tr>
                 <td class="fw-bold">Nome:</td>
                 <td class="fw-bold">Código:</td>

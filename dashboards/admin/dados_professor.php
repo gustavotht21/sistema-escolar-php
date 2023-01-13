@@ -32,7 +32,7 @@
     <div class="container mt-3">
         <a href="professores.php?pg=professores" class="btn btn-info text-white fw-bold">Voltar para a tela de professores</a>
         <h2 class="text-secondary mt-3">Dados do(a) professor(a)</h2>
-        <table class="table table-striped mt-3">
+        <table class="table table-striped mt-3 align-middle">
             <tr>
                 <td class="fw-bold">Nome:</td>
                 <td class="fw-bold">Código:</td>
@@ -75,7 +75,7 @@
             </tr>
         </table>
         <h2 class="text-secondary mt-3">Disciplinas que o(a) professor(a) ministra</h2>
-        <table class="table table-striped mt-3">
+        <table class="table table-striped mt-3 align-middle">
             <tr>
                 <td class="fw-bold">Nome da disciplina:</td>
                 <td class="fw-bold">Curso da disciplina:</td>

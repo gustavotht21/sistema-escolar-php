@@ -50,7 +50,7 @@
                 print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>Não há nenhum curso cadastrado</h2>";
             } else { ?>
                 <h3 class="text-secondary mt-3">Cursos</h3>
-                <table class="table table-striped table-secondary">
+                <table class="table table-striped table-secondary align-middle">
                     <tr>
                         <td class="fw-semibold">Curso:</td>
                         <td class="fw-semibold">Disciplinas:</td>
@@ -154,7 +154,7 @@
             print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>Não há nenhuma disciplina cadastrada</h2>";
         } else { ?>
             <h3 class="text-secondary mt-3">Disciplinas</h3>
-            <table class="table table-striped table-secondary">
+            <table class="table table-striped table-secondary align-middle">
                 <tr>
                     <td class="fw-semibold">Curso:</td>
                     <td class="fw-semibold">Disciplina:</td>
@@ -217,7 +217,7 @@
                 print "<h2 class='p-1 bg-warning text-white rounded-2 fs-6 mt-3 w-50'>Não há nenhum curso cadastrado</h2>";
             } else { ?>
                 <h3 class="text-secondary mt-3">Cursos e disciplinas</h3>
-                <table class="table table-striped table-secondary">
+                <table class="table table-striped table-secondary align-middle">
                     <tr>
                         <td class="fw-semibold">Curso:</td>
                         <td class="fw-semibold">Disciplinas:</td>
