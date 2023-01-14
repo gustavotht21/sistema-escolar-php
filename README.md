@@ -12,7 +12,7 @@
 
 ## ⚙️ Introdução
 
-Esse é um projeto que visa a elaboração de um sistema escolar para o gerencimento de uma instituição de ensino
+Esse é um projeto que visa a elaboração de um sistema escolar para o gerenciamento de uma instituição de ensino
 
 ## 🖥️ Tecnologias utilizadas
 
